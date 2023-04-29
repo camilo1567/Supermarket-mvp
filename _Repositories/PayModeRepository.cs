@@ -39,10 +39,10 @@ namespace SupermarketHorta_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "SELECT * PayMode ORDER BY Pay_Mode_Id DESC";
+                command.CommandText = "SELECT * FROM PayMode ORDER BY Pay_Mode_Id DESC";
                 using (var reader = command.ExecuteReader())
                 {
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         var payModeModel = new PayModeModel();
                         payModeModel.Id = (int)reader["Pay_Mode_Id"];

@@ -18,9 +18,6 @@ namespace SupermarketHorta_mvp.Views
         public PayModeView()
         {
             InitializeComponent();
-            AssociateAndRaiseViewEvents();
-
-            tabControl1.TabPages.Remove(tabPagePayModeDetail);
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -29,47 +26,46 @@ namespace SupermarketHorta_mvp.Views
 
             TxtSearch.KeyDown += (s, e) =>
             {
-                if(e.KeyCode == Keys.Enter)
+                if (e.KeyCode == Keys.Enter)
                 {
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
         }
+        public string PayModeId
+        {
+            get { return TxtPayModeId.Text; }
+            set { TxtPayModeId.Text = value; }
 
-        public string PayModeId 
-        { 
-            get { return TxtPayModeId.Text; } 
-            set { TxtPayModeId.Text = value; } 
-        
         }
-        public string PayModeName 
+        public string PayModeName
         {
             get { return TxtPayModeName.Text; }
             set { TxtPayModeName.Text = value; }
-        
+
         }
-        public string PayModeObservation 
+        public string PayModeObservation
         {
             get { return TxtPayModeObservation.Text; }
             set { TxtPayModeObservation.Text = value; }
         }
-        public string SearchValue 
-        { 
+        public string SearchValue
+        {
             get { return TxtSearch.Text; }
             set { TxtSearch.Text = value; }
         }
-        public bool IsEdit 
-        { 
+        public bool IsEdit
+        {
             get { return isEdit; }
             set { isEdit = value; }
         }
-        public bool IsSuccessful 
+        public bool IsSuccessful
         {
             get { return isSuccessful; }
             set { isSuccessful = value; }
         }
-        public string Message 
-        { 
+        public string Message
+        {
             get { return message; }
             set { message = value; }
         }
@@ -80,15 +76,10 @@ namespace SupermarketHorta_mvp.Views
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
+
         public void SetPayModeListBildingSource(BindingSource payModeList)
         {
             DgPayMode.DataSource = payModeList;
         }
-
-        private void PayModeView_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
