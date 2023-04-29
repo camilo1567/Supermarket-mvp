@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.BtnPayMode = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -37,12 +38,24 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnExit);
             this.panel1.Controls.Add(this.BtnPayMode);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 543);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BtnExit.BackgroundImage = global::SupermarketHorta_mvp.Properties.Resources.salida;
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnExit.Location = new System.Drawing.Point(3, 432);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(297, 111);
+            this.BtnExit.TabIndex = 3;
+            this.BtnExit.UseVisualStyleBackColor = true;
             // 
             // BtnPayMode
             // 
@@ -72,6 +85,7 @@
             this.ClientSize = new System.Drawing.Size(1326, 543);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.IsMdiContainer = true;
             this.Name = "MainView";
             this.Text = "SuperMarket";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -86,5 +100,6 @@
         private Panel panel1;
         private Button BtnPayMode;
         private PictureBox pictureBox1;
+        private Button BtnExit;
     }
 }
