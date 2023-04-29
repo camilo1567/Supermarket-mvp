@@ -286,8 +286,11 @@
             this.TxtPayModeId.BackColor = System.Drawing.SystemColors.ControlLight;
             this.TxtPayModeId.Location = new System.Drawing.Point(25, 51);
             this.TxtPayModeId.Name = "TxtPayModeId";
+            this.TxtPayModeId.ReadOnly = true;
             this.TxtPayModeId.Size = new System.Drawing.Size(228, 31);
             this.TxtPayModeId.TabIndex = 2;
+            this.TxtPayModeId.Text = "0";
+            this.TxtPayModeId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
