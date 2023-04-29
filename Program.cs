@@ -18,10 +18,8 @@ namespace SupermarketHorta_mvp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             string sqlConnectionString = Settings.Default.SqlConnection;
-            IPayModeView view = new PayModeView();
-            IPayModeRepository repository = new PayModeRepository(sqlConnectionString);
-            Application.Run(new PayModeView());
-            new PayModePresenter(view, repository);
+            IMainView view = new MainView();
+            new MainPresenter(view, sqlConnectionString);
             Application.Run((Form)view);
         }
     }
